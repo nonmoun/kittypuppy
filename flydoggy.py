@@ -25,9 +25,4 @@ s = """
 </html>
 """
 
-class index:
-    def GET(self):
-        return s
-
-
 application = web.application(urls, globals()).wsgifunc()
