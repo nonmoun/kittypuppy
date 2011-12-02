@@ -1,8 +1,7 @@
 #coding:utf-8
 
 import web
-from app_main.app import application as app_main
-
+from apps.main.app import application as app_main
 urls = (
     '/', app_main
 )
