@@ -4,7 +4,7 @@ import web
 from app_main.app import application as app_main
 
 urls = (
-    '/.*', app_main
+    '/', app_main
 )
 
 

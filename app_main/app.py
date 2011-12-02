@@ -1,10 +1,10 @@
 #coding:utf-8
 
 import web
-import views
+import controllers
 
 urls = (
-  "", views.index,
+  "", controllers.index,
 )
 
 application = web.application(urls, locals())
