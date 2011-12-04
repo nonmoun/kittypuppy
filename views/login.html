@@ -1,0 +1,17 @@
+<%inherit file="base.html"/>
+
+<%block name="HTML_TITLE">Login</%block>
+
+<%block name="MAIN">
+
+<div id="tips"> 
+    hello, you are ${name}, password is ${password}.    
+</div>
+
+<form action="/login" method="get">
+    <input type="text" name="u" />
+    <input type="text" name="p" />
+    <input type="submit" value="Login" />
+</form>
+
+</%block> 

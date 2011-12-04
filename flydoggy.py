@@ -7,7 +7,7 @@ sys.path.append(current_path)
 sys.path.append(os.path.join(current_path, "libs"))
 
 import web
-from runserver import urls
+from runserver import application
 
 
-application = web.application(urls).wsgifunc()
+application = application.wsgifunc()
