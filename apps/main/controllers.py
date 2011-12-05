@@ -2,12 +2,11 @@
 
 import views
 from  web import form
-
+import web
 
 class index:
     def GET(self):
         return views.Template("base").render() 
-    
     
 
 class login(object):
@@ -23,3 +22,13 @@ class login(object):
         )
         return fm.render()
         #return views.Template("login").render(name='1', password=23)
+        
+a= ""
+class editor(object):
+    def GET(self):
+        return views.Template("editor").render(content=a)
+    
+    def POST(self):
+        global a
+        a = web.input().idc
+        return views.Template("editor").render(content=a)

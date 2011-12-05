@@ -4,5 +4,6 @@ import controllers
 
 urls = (
   "/", controllers.index,
-  "/login?", controllers.login
+  "/login", controllers.login,
+  "/ed", controllers.editor
 )
