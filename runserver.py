@@ -10,7 +10,7 @@ def load_urls():
     return urls_all
 
 urls = load_urls()
-applicatoin = web.application(urls)
+application = web.application(urls, autoreload=True)
 
 
 def my_processor(handler): 
@@ -21,8 +21,8 @@ def my_processor(handler):
     print 'after handling'
     return result
 
-applicatoin.add_processor(my_processor)
+application.add_processor(my_processor)
 
 if __name__ == '__main__':
     web.config.debug = True
-    applicatoin.run()
+    application.run()

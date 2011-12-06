@@ -6,5 +6,6 @@ urls = (
   "/", controllers.index,
   "/login", controllers.login,
   "/ed", controllers.editor,
-  "/register", controllers.register
+  "/register", controllers.register,
+  '/sd', controllers.login,
 )

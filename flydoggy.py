@@ -9,5 +9,4 @@ sys.path.append(os.path.join(current_path, "libs"))
 import web
 from runserver import application
 
-
 application = application.wsgifunc()
