@@ -3,8 +3,6 @@
 import web
 
 
-
-
 def load_urls():   
     urls_all = []
     from apps.main.urls import urls as urls

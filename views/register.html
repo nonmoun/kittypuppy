@@ -1,0 +1,28 @@
+<%inherit file="base.html"/>
+
+<%block name="HTML_TITLE">Register</%block>
+
+<%block name="CSS">
+    <link href="/static/css/login.css" type="text/css" rel="stylesheet" />
+</%block>
+
+<%block name="MAIN">
+
+<div id="register">
+    <form method="post">
+        <div>
+            <label for="u">用户名</label>
+            <input id="u" type="text" name="u" />
+        </div>
+        
+        <div>
+            <label for="p">密码</label>
+            <input id="p" type="password" name="u" />
+        </div>
+    <input type="submit" value="submit" />
+</form>
+    
+</div>
+
+
+</%block> 

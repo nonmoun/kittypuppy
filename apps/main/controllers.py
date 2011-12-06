@@ -9,7 +9,7 @@ class index:
         return views.Template("base").render() 
     
 
-class login(object):
+class login:
     def GET(self):
         fm = form.Form(
          form.Textbox("username", description="Username"),
@@ -22,13 +22,19 @@ class login(object):
         )
         return fm.render()
         #return views.Template("login").render(name='1', password=23)
-        
-a= ""
-class editor(object):
+      
+class register:
+    def GET(self):
+        return views.Template("register").render()
+    
+    def POST(self):
+        return views.Template("register").render()
+
+class editor:
     def GET(self):
         return views.Template("editor").render(content=a)
     
     def POST(self):
-        global a
+
         a = web.input().idc
         return views.Template("editor").render(content=a)

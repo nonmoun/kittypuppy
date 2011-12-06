@@ -5,5 +5,6 @@ import controllers
 urls = (
   "/", controllers.index,
   "/login", controllers.login,
-  "/ed", controllers.editor
+  "/ed", controllers.editor,
+  "/register", controllers.register
 )
