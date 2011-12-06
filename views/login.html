@@ -1,17 +1,18 @@
 <%inherit file="base.html"/>
 
 <%block name="HTML_TITLE">Login</%block>
-
+<%block name="CSS"> 
+    ${parent.CSS()}
+    <link href="/static/css/login.css" rel="stylesheet" type="text/css" />
+</%block>
 <%block name="MAIN">
 
-<div id="tips"> 
-    hello, you are ${name}, password is ${password}.    
-</div>
-
 <form action="/login" method="get">
-    <input type="text" name="u" />
-    <input type="text" name="p" />
-    <input type="submit" value="Login" />
+    <label for="u" >username</label>
+    <input type="text" id="u" name="u" />
+    <label for="p" >password</label>
+    <input type="password" id="p" name="p" />
+    <input type="submit" id="login" value="Login" />
 </form>
 
 </%block> 

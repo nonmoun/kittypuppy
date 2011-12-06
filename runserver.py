@@ -12,17 +12,6 @@ def load_urls():
 urls = load_urls()
 application = web.application(urls, autoreload=True)
 
-
-def my_processor(handler): 
-    print 'before handling'
-    
-    result = handler() 
-    print result
-    print 'after handling'
-    return result
-
-application.add_processor(my_processor)
-
 if __name__ == '__main__':
     web.config.debug = True
     application.run()

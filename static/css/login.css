@@ -1,0 +1,5 @@
+form {margin:0 auto; width:300px;}
+form label, form input {display:block;}
+input,label {margin: 5px;}
+#u, #p {width: 200px;}
+#login {width: 100px;}

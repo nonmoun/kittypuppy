@@ -8,19 +8,9 @@ class index:
     def GET(self):
         return views.Template("base").render() 
     
-
 class login:
     def GET(self):
-        fm = form.Form(
-            form.Textbox("username", description="Username"),
-            form.Password("pas3swor2d", description="Pa23ssword"),
-            form.Button("submit", type="submit", description="Register"),
-            validators = [
-                form.Validator("Passwords did't match", lambda i: i.password == i.password2)
-                ]
-            )
-        return fm.render()
-        #return views.Template("login").render(name='1', password=23)
+        return views.Template("login").render()
       
 class register:
     def GET(self):
