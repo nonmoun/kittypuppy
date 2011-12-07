@@ -382,9 +382,6 @@ class application:
             if not hasattr(cls, meth):
                 raise web.nomethod(cls)
             tocall = getattr(cls(), meth)
-            #patch:
-            import patches
-            patches.set_context_params()
             return tocall(*args)
             
         def is_class(o): return isinstance(o, (types.ClassType, type))

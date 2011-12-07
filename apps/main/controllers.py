@@ -10,7 +10,21 @@ class index:
     
 class login:
     def GET(self):
+        params = web.cookies()
+        uid = params.get("uid", None)
+        if uid and uid=="3333":
+            return web.seeother("/")
         return views.Template("login").render()
+    
+    def POST(self):
+        params = web.input()
+        if "u" in params and "p" in params:
+            web.setcookie("uid", "3333")
+            return web.seeother("/")
+        #
+        return views.Template("login").render()
+            
+        
       
 class register:
     def GET(self):
